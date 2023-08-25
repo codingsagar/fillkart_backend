@@ -29,6 +29,9 @@ connectDB();
 const PORT = process.env.PORT || 3500;
 
 
+
+
+
 // getting all the routes defined for users like login,register or more
 const userRoutes = require('./routes/userRoutes');
 
@@ -51,6 +54,13 @@ const paymentRoutes = require("./routes/paymentRoutes");
 
 // for security so outside world don't know what server we are using easily
 app.disable("x-powered-by");
+
+
+
+app.get('/', (req, res) => {
+    res.send('FILLKART API IS UP AND RUNNING');
+});
+
 
 app.use(cookieParser());
 

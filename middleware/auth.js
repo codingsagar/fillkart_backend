@@ -17,6 +17,7 @@ const isAuthenticatedUser = async (req,res,next)=>{
         req.user = await User.findById(decodedData.id);
         next();
     }catch (e) {
+        console.log("Cookie - token error")
         res.clearCookie("token");
         return res.status(401).json({ message: 'Something went wrong ! Try to login again.' });
     }
