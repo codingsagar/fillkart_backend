@@ -1,11 +1,11 @@
 ### REGISTER ROUTE TESTING
-POST http://localhost:5200/api/user/register
+POST https://fillkart-api.onrender.com/api/user/register
 Content-Type: application/json
 
 {
-  "name": "Sagar Bhat",
-  "email": "sagar@fillkart.com",
-  "password": "sagar123"
+  "name": "Ritik Pandita",
+  "email": "ritik@pandita.com",
+  "password": "ritik123"
 }
 
 

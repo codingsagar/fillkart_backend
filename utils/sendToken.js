@@ -16,8 +16,8 @@ const sendToken = (user,statusCode,res) =>{
 
         ),
         httpOnly:true,
-        secure:false,
-        sameSite:"lax"
+        secure:true,
+        sameSite:"None"
     };
 
     const userData = {name:user.name,email:user.email,role:user.role,createdAt:user.createdAt};
