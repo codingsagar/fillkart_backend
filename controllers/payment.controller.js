@@ -25,8 +25,8 @@ const checkOutController = catchAsyncErrors(async (req,res)=> {
         const session = await stripe.checkout.sessions.create({
             line_items: lineItems,
             mode: 'payment',
-            success_url: process.env.FRONT_END_URL+'/payment/success',
-            cancel_url: process.env.FRONT_END_URL+'/payment/failure',
+            success_url: process.env.FRONTEND_URL+'/payment/success',
+            cancel_url: process.env.FRONTEND_URL+'/payment/failure',
             metadata:{
                 'userId':userId.toString()
             }
