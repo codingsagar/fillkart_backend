@@ -75,7 +75,11 @@ const loginUser = asyncHandler(async (req,res)=>{
 
 const logout = asyncHandler(async (req, res, next) => {
 
-    res.clearCookie("token");
+    res.clearCookie("token",{
+        httpOnly:true,
+        secure:true,
+        sameSite:"None"}
+    );
 
     res.status(200).json({
         success: true,
